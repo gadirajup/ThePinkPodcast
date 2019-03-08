@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class PodcastSearchController: UITableViewController, UISearchBarDelegate {
     
@@ -41,6 +42,17 @@ class PodcastSearchController: UITableViewController, UISearchBarDelegate {
     // MARK:- Search Functions
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         // Add AlamoFire
+        let url = "https://itunes.apple.com/search?term=\(searchText)"
+        Alamofire.request(url).response { (dataResponse) in
+            if let error = dataResponse.error {
+                print("Failed to contact Yahoo", error)
+                return
+            }
+
+            guard let data = dataResponse.data else {return}
+            let dummyString = String(data: data, encoding: .utf8)
+            print(dummyString ?? "")
+        }
     }
     
     
