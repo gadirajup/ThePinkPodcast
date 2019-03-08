@@ -15,6 +15,7 @@
 		A4A0C9682232FA8900200C4D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4A0C9662232FA8900200C4D /* LaunchScreen.storyboard */; };
 		A4A0C9732232FA8A00200C4D /* ThePinkPodcastTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A0C9722232FA8A00200C4D /* ThePinkPodcastTests.swift */; };
 		A4A0C97E2232FA8A00200C4D /* ThePinkPodcastUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A0C97D2232FA8A00200C4D /* ThePinkPodcastUITests.swift */; };
+		A4A0C98C2232FACC00200C4D /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A0C98B2232FACC00200C4D /* MainTabBarController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		A4A0C9792232FA8A00200C4D /* ThePinkPodcastUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ThePinkPodcastUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4A0C97D2232FA8A00200C4D /* ThePinkPodcastUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThePinkPodcastUITests.swift; sourceTree = "<group>"; };
 		A4A0C97F2232FA8A00200C4D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A4A0C98B2232FACC00200C4D /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 			children = (
 				A4A0C95A2232FA8800200C4D /* AppDelegate.swift */,
 				A4A0C95C2232FA8800200C4D /* ViewController.swift */,
+				A4A0C98B2232FACC00200C4D /* MainTabBarController.swift */,
 				A4A0C95E2232FA8800200C4D /* Main.storyboard */,
 				A4A0C9642232FA8900200C4D /* Assets.xcassets */,
 				A4A0C9662232FA8900200C4D /* LaunchScreen.storyboard */,
@@ -261,6 +264,7 @@
 			files = (
 				A4A0C95D2232FA8800200C4D /* ViewController.swift in Sources */,
 				A4A0C9632232FA8800200C4D /* ThePinkPodcast.xcdatamodeld in Sources */,
+				A4A0C98C2232FACC00200C4D /* MainTabBarController.swift in Sources */,
 				A4A0C95B2232FA8800200C4D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
