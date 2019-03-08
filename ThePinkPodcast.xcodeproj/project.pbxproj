@@ -16,6 +16,8 @@
 		A4A0C9732232FA8A00200C4D /* ThePinkPodcastTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A0C9722232FA8A00200C4D /* ThePinkPodcastTests.swift */; };
 		A4A0C97E2232FA8A00200C4D /* ThePinkPodcastUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A0C97D2232FA8A00200C4D /* ThePinkPodcastUITests.swift */; };
 		A4A0C98C2232FACC00200C4D /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A0C98B2232FACC00200C4D /* MainTabBarController.swift */; };
+		A4A0C98F2233022E00200C4D /* PodcastSearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A0C98E2233022E00200C4D /* PodcastSearchController.swift */; };
+		A4A0C992223302B600200C4D /* Podcast.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A0C991223302B600200C4D /* Podcast.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,8 @@
 		A4A0C97D2232FA8A00200C4D /* ThePinkPodcastUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThePinkPodcastUITests.swift; sourceTree = "<group>"; };
 		A4A0C97F2232FA8A00200C4D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A4A0C98B2232FACC00200C4D /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		A4A0C98E2233022E00200C4D /* PodcastSearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodcastSearchController.swift; sourceTree = "<group>"; };
+		A4A0C991223302B600200C4D /* Podcast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Podcast.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +105,8 @@
 		A4A0C9592232FA8800200C4D /* ThePinkPodcast */ = {
 			isa = PBXGroup;
 			children = (
+				A4A0C990223302A500200C4D /* Models */,
+				A4A0C98D2233021800200C4D /* Controllers */,
 				A4A0C95A2232FA8800200C4D /* AppDelegate.swift */,
 				A4A0C95C2232FA8800200C4D /* ViewController.swift */,
 				A4A0C98B2232FACC00200C4D /* MainTabBarController.swift */,
@@ -129,6 +135,22 @@
 				A4A0C97F2232FA8A00200C4D /* Info.plist */,
 			);
 			path = ThePinkPodcastUITests;
+			sourceTree = "<group>";
+		};
+		A4A0C98D2233021800200C4D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				A4A0C98E2233022E00200C4D /* PodcastSearchController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		A4A0C990223302A500200C4D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A4A0C991223302B600200C4D /* Podcast.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,7 +284,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4A0C98F2233022E00200C4D /* PodcastSearchController.swift in Sources */,
 				A4A0C95D2232FA8800200C4D /* ViewController.swift in Sources */,
+				A4A0C992223302B600200C4D /* Podcast.swift in Sources */,
 				A4A0C9632232FA8800200C4D /* ThePinkPodcast.xcdatamodeld in Sources */,
 				A4A0C98C2232FACC00200C4D /* MainTabBarController.swift in Sources */,
 				A4A0C95B2232FA8800200C4D /* AppDelegate.swift in Sources */,
@@ -450,7 +474,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = me.prudhvi.ThePinkPodcast;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -468,7 +492,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = me.prudhvi.ThePinkPodcast;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
