@@ -13,11 +13,7 @@ class PodcastSearchController: UITableViewController, UISearchBarDelegate {
     
     let cellId = "cellId"
     let searchController = UISearchController(searchResultsController: nil)
-    var podcasts = [
-        Podcast(trackName: "Startup Lyfe", artistName: "Prudhvi Gadiraju"),
-        Podcast(trackName: "Pink Panther Trials", artistName: "Prudhvi Gadiraju"),
-        Podcast(trackName: "Holla Holla", artistName: "Prudhvi Gadiraju")
-    ]
+    var podcasts = [Podcast]()
     
     override func viewDidLoad() {
         super.viewDidLoad()

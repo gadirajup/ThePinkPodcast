@@ -11,4 +11,7 @@ import Foundation
 struct Podcast: Decodable {
     let trackName: String?
     let artistName: String?
+    let trackCount: Int?
+    let artworkUrl600: String?
+    let feedUrl: String?
 }
