@@ -47,7 +47,6 @@ class PodcastSearchController: UITableViewController, UISearchBarDelegate {
         timer = Timer.scheduledTimer(withTimeInterval: 0.5, repeats: false, block: { (time) in
             APIService.shared.fetchPodcasts(searchText: searchText) { (podcasts) in
                 self.podcasts = podcasts
-                self.searching = false
                 self.tableView.reloadData()
             }
         })
