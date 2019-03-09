@@ -24,6 +24,7 @@ class PodcastSearchController: UITableViewController, UISearchBarDelegate {
     
     // MARK:- Setup Functions
     fileprivate func setupSearchBar() {
+        self.definesPresentationContext = true
         navigationItem.searchController = searchController
         navigationItem.hidesSearchBarWhenScrolling = false
         
@@ -48,6 +49,12 @@ class PodcastSearchController: UITableViewController, UISearchBarDelegate {
     }
 
     // MARK:- Table View Functions
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let episodesController = EpisodesController()
+        episodesController.podcast = podcasts[indexPath.row]
+        navigationController?.pushViewController(episodesController, animated: true)
+    }
+    
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let label = UILabel()
         label.text = "Please enter a search text"
