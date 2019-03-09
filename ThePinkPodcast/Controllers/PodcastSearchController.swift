@@ -34,11 +34,12 @@ class PodcastSearchController: UITableViewController, UISearchBarDelegate {
     fileprivate func setupTableView() {
         let nib = UINib(nibName: "PodcastCell", bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: cellId)
+        tableView.separatorStyle = .none
     }
     
     // MARK:- Search Functions
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        //let url = "https://itunes.apple.com/search?term=\(searchText)"
+        tableView.separatorStyle = podcasts.count > 0 ? .singleLine : .none
         
         APIService.shared.fetchPodcasts(searchText: searchText) { (podcasts) in
             self.podcasts = podcasts
@@ -47,6 +48,19 @@ class PodcastSearchController: UITableViewController, UISearchBarDelegate {
     }
 
     // MARK:- Table View Functions
+    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let label = UILabel()
+        label.text = "Please enter a search text"
+        label.textAlignment = .center
+        label.font = UIFont(name: "Avenir-Medium", size: 18)
+        label.textColor = #colorLiteral(red: 0.8549019694, green: 0.250980407, blue: 0.4784313738, alpha: 1)
+        return label
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return podcasts.count > 0 ? 0 : 250
+    }
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return podcasts.count
     }
