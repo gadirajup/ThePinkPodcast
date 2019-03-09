@@ -13,10 +13,10 @@ class PodcastSearchController: UITableViewController, UISearchBarDelegate {
     
     let cellId = "cellId"
     let searchController = UISearchController(searchResultsController: nil)
-    let podcasts = [
-        Podcast(name: "Startup Lyfe", artistName: "Prudhvi Gadiraju"),
-        Podcast(name: "Pink Panther Trials", artistName: "Prudhvi Gadiraju"),
-        Podcast(name: "Holla Holla", artistName: "Prudhvi Gadiraju")
+    var podcasts = [
+        Podcast(trackName: "Startup Lyfe", artistName: "Prudhvi Gadiraju"),
+        Podcast(trackName: "Pink Panther Trials", artistName: "Prudhvi Gadiraju"),
+        Podcast(trackName: "Holla Holla", artistName: "Prudhvi Gadiraju")
     ]
     
     override func viewDidLoad() {
@@ -36,26 +36,20 @@ class PodcastSearchController: UITableViewController, UISearchBarDelegate {
     }
     
     fileprivate func setupTableView() {
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellId)
+        let nib = UINib(nibName: "PodcastCell", bundle: nil)
+        tableView.register(nib, forCellReuseIdentifier: cellId)
     }
     
     // MARK:- Search Functions
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        // Add AlamoFire
-        let url = "https://itunes.apple.com/search?term=\(searchText)"
-        Alamofire.request(url).response { (dataResponse) in
-            if let error = dataResponse.error {
-                print("Failed to contact Yahoo", error)
-                return
-            }
-
-            guard let data = dataResponse.data else {return}
-            let dummyString = String(data: data, encoding: .utf8)
-            print(dummyString ?? "")
+        //let url = "https://itunes.apple.com/search?term=\(searchText)"
+        
+        APIService.shared.fetchPodcasts(searchText: searchText) { (podcasts) in
+            self.podcasts = podcasts
+            self.tableView.reloadData()
         }
     }
-    
-    
+
     // MARK:- Table View Functions
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return podcasts.count
@@ -65,10 +59,14 @@ class PodcastSearchController: UITableViewController, UISearchBarDelegate {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath)
         
         let podcast = self.podcasts[indexPath.row]
-        cell.textLabel?.text = podcast.name
+        cell.textLabel?.text = podcast.trackName
         cell.textLabel?.numberOfLines = -1
         cell.detailTextLabel?.text = podcast.artistName
         cell.imageView?.image = #imageLiteral(resourceName: "appicon")
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 132
     }
 }
