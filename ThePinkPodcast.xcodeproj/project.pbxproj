@@ -21,6 +21,7 @@
 		A4A0C992223302B600200C4D /* Podcast.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A0C991223302B600200C4D /* Podcast.swift */; };
 		A4FF62082233127700991656 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4FF62072233127700991656 /* APIService.swift */; };
 		A4FF620B22333C5700991656 /* PodcastCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A4FF620A22333C5700991656 /* PodcastCell.xib */; };
+		A4FF620D22333E0D00991656 /* PodcastCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4FF620C22333E0D00991656 /* PodcastCell.swift */; };
 		ACA03892FA9775E92BEAF032 /* Pods_ThePinkPodcastTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE5207FFC8C6E03782300EB4 /* Pods_ThePinkPodcastTests.framework */; };
 		EC35A8098885B77BFD99C3BC /* Pods_ThePinkPodcast.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A2140716EC44EA31FFAAC1A /* Pods_ThePinkPodcast.framework */; };
 /* End PBXBuildFile section */
@@ -69,6 +70,7 @@
 		A4A0C991223302B600200C4D /* Podcast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Podcast.swift; sourceTree = "<group>"; };
 		A4FF62072233127700991656 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		A4FF620A22333C5700991656 /* PodcastCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PodcastCell.xib; sourceTree = "<group>"; };
+		A4FF620C22333E0D00991656 /* PodcastCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodcastCell.swift; sourceTree = "<group>"; };
 		D5312A261987950D6829FC51 /* Pods-ThePinkPodcastTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThePinkPodcastTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ThePinkPodcastTests/Pods-ThePinkPodcastTests.release.xcconfig"; sourceTree = "<group>"; };
 		DE5207FFC8C6E03782300EB4 /* Pods_ThePinkPodcastTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ThePinkPodcastTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -211,6 +213,7 @@
 			isa = PBXGroup;
 			children = (
 				A4FF620A22333C5700991656 /* PodcastCell.xib */,
+				A4FF620C22333E0D00991656 /* PodcastCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -444,6 +447,7 @@
 			files = (
 				A4A0C98F2233022E00200C4D /* PodcastSearchController.swift in Sources */,
 				A4FF62082233127700991656 /* APIService.swift in Sources */,
+				A4FF620D22333E0D00991656 /* PodcastCell.swift in Sources */,
 				A4A0C95D2232FA8800200C4D /* ViewController.swift in Sources */,
 				A4A0C992223302B600200C4D /* Podcast.swift in Sources */,
 				A4A0C9632232FA8800200C4D /* ThePinkPodcast.xcdatamodeld in Sources */,

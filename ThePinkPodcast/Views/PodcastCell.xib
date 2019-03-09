@@ -11,11 +11,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="240" id="YHQ-KF-vFa">
-            <rect key="frame" x="0.0" y="0.0" width="582" height="240"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="140" id="YHQ-KF-vFa" customClass="PodcastCell" customModule="ThePinkPodcast" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="643" height="140"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="YHQ-KF-vFa" id="lFC-42-jsj">
-                <rect key="frame" x="0.0" y="0.0" width="582" height="239.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="643" height="139.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="appicon" translatesAutoresizingMaskIntoConstraints="NO" id="FyF-lh-DZX">
@@ -25,34 +25,45 @@
                             <constraint firstAttribute="height" constant="100" id="rf4-mt-iHf"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Track Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BJa-US-SUu">
-                        <rect key="frame" x="128" y="19" width="92" height="21"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Artist Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="taJ-2C-Haw">
-                        <rect key="frame" x="128" y="48" width="91" height="21"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Episode Count" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="25I-1n-9S3">
-                        <rect key="frame" x="128" y="77" width="112" height="21"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="xC9-is-4jg">
+                        <rect key="frame" x="132" y="32" width="491" height="74.5"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Track Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BJa-US-SUu">
+                                <rect key="frame" x="0.0" y="0.0" width="110.5" height="27.5"/>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artist Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="taJ-2C-Haw">
+                                <rect key="frame" x="0.0" y="29.5" width="93.5" height="23.5"/>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Episode Count" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="25I-1n-9S3">
+                                <rect key="frame" x="0.0" y="55" width="93.5" height="19.5"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </stackView>
                 </subviews>
                 <constraints>
+                    <constraint firstAttribute="trailingMargin" secondItem="xC9-is-4jg" secondAttribute="trailing" id="EV7-Uq-FWt"/>
                     <constraint firstItem="FyF-lh-DZX" firstAttribute="leading" secondItem="lFC-42-jsj" secondAttribute="leadingMargin" id="WoQ-F8-XXg"/>
+                    <constraint firstItem="xC9-is-4jg" firstAttribute="leading" secondItem="FyF-lh-DZX" secondAttribute="trailing" constant="12" id="b7D-HU-dkL"/>
+                    <constraint firstItem="xC9-is-4jg" firstAttribute="centerY" secondItem="FyF-lh-DZX" secondAttribute="centerY" id="u23-Dt-Dge"/>
                     <constraint firstItem="FyF-lh-DZX" firstAttribute="top" secondItem="lFC-42-jsj" secondAttribute="topMargin" constant="8" id="yC9-Ri-v6h"/>
                 </constraints>
             </tableViewCellContentView>
-            <point key="canvasLocation" x="72" y="330.13493253373315"/>
+            <connections>
+                <outlet property="artistNameLabel" destination="taJ-2C-Haw" id="U8G-na-QT8"/>
+                <outlet property="episodeCountLabel" destination="25I-1n-9S3" id="fb6-Co-kwH"/>
+                <outlet property="podcastImageView" destination="FyF-lh-DZX" id="BhP-zl-D0b"/>
+                <outlet property="trackNameLabel" destination="BJa-US-SUu" id="rpr-uK-PGA"/>
+            </connections>
+            <point key="canvasLocation" x="120.8" y="285.15742128935534"/>
         </tableViewCell>
     </objects>
     <resources>

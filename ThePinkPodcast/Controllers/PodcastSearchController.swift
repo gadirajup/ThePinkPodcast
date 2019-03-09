@@ -56,13 +56,8 @@ class PodcastSearchController: UITableViewController, UISearchBarDelegate {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath)
-        
-        let podcast = self.podcasts[indexPath.row]
-        cell.textLabel?.text = podcast.trackName
-        cell.textLabel?.numberOfLines = -1
-        cell.detailTextLabel?.text = podcast.artistName
-        cell.imageView?.image = #imageLiteral(resourceName: "appicon")
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! PodcastCell
+        cell.podcast = self.podcasts[indexPath.row]
         return cell
     }
     
