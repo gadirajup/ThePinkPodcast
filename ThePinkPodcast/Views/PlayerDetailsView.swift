@@ -8,6 +8,7 @@
 
 import UIKit
 import AVKit
+import MediaPlayer
 
 class PlayerDetailsView: UIView {
     
@@ -73,9 +74,51 @@ class PlayerDetailsView: UIView {
     override func awakeFromNib() {
         super.awakeFromNib()
         
+        setupRemoteControl()
+        setupAudioSession()
         setupGestures()
         observePlayerCurrentTime()
         setupTimeObserver()
+    }
+    
+    fileprivate func setupRemoteControl() {
+        
+        let commandCenter = MPRemoteCommandCenter.shared()
+        
+        UIApplication.shared.beginReceivingRemoteControlEvents()
+        
+        commandCenter.playCommand.isEnabled = true
+        commandCenter.playCommand.addTarget { (_) -> MPRemoteCommandHandlerStatus in
+            self.player.play()
+            self.playButton.setImage(#imageLiteral(resourceName: "pause"), for: .normal)
+            self.miniPlayButton.setImage(#imageLiteral(resourceName: "pause"), for: .normal)
+            return MPRemoteCommandHandlerStatus.success
+        }
+        
+        commandCenter.pauseCommand.isEnabled = true
+        commandCenter.pauseCommand.addTarget { (_) -> MPRemoteCommandHandlerStatus in
+            self.player.pause()
+            self.playButton.setImage(#imageLiteral(resourceName: "play"), for: .normal)
+            self.miniPlayButton.setImage(#imageLiteral(resourceName: "play"), for: .normal)
+            return MPRemoteCommandHandlerStatus.success
+        }
+        
+        commandCenter.togglePlayPauseCommand.isEnabled = true
+        commandCenter.togglePlayPauseCommand.addTarget { (_) -> MPRemoteCommandHandlerStatus in
+            
+            self.handlePlayPause()
+            
+            return .success
+        }
+    }
+    
+    fileprivate func setupAudioSession(){
+        do {
+            try AVAudioSession.sharedInstance().setCategory(.playback, mode: .default, options: .defaultToSpeaker)
+            try AVAudioSession.sharedInstance().setActive(true)
+        } catch {
+            print("Failed to activate session", error.localizedDescription)
+        }
     }
     
     fileprivate func setupTimeObserver() {
