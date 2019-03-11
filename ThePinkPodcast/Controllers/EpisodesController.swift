@@ -50,7 +50,8 @@ class EpisodesController: UITableViewController {
         let episode = episodes[indexPath.row]
         
         let mainTabBarController = UIApplication.shared.keyWindow?.rootViewController as? MainTabBarController
-        mainTabBarController?.maximizePlayerDetailsView(withEpisode: episode)
+        
+        mainTabBarController?.maximizePlayerDetailsView(withEpisode: episode, playlistEpisodes: self.episodes)
         
     }
     
