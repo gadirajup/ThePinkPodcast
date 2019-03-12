@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		64C7409EACE6EF009247C272 /* Pods_ThePinkPodcastUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 391C25E41CABEC54BE559D11 /* Pods_ThePinkPodcastUITests.framework */; };
+		A47D3F582237316000CC5FBD /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47D3F572237316000CC5FBD /* UserDefaults.swift */; };
+		A4885EF7223719DD00C395EE /* FavoritesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4885EF6223719DD00C395EE /* FavoritesController.swift */; };
+		A4885EF922371DF300C395EE /* FavoritePodcastCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4885EF822371DF300C395EE /* FavoritePodcastCell.swift */; };
 		A490F70622349A2E0076F03A /* UIApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = A490F70522349A2E0076F03A /* UIApplication.swift */; };
 		A4A0C95B2232FA8800200C4D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A0C95A2232FA8800200C4D /* AppDelegate.swift */; };
 		A4A0C95D2232FA8800200C4D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A0C95C2232FA8800200C4D /* ViewController.swift */; };
@@ -61,6 +64,9 @@
 		7C82EB297CEFEB97AABF217C /* Pods-ThePinkPodcastTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThePinkPodcastTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ThePinkPodcastTests/Pods-ThePinkPodcastTests.debug.xcconfig"; sourceTree = "<group>"; };
 		836F692CBDC8B7429C4D9EBA /* Pods-ThePinkPodcastUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThePinkPodcastUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ThePinkPodcastUITests/Pods-ThePinkPodcastUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		88C5E16E6C32F733DAAF51B3 /* Pods-ThePinkPodcast.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThePinkPodcast.release.xcconfig"; path = "Pods/Target Support Files/Pods-ThePinkPodcast/Pods-ThePinkPodcast.release.xcconfig"; sourceTree = "<group>"; };
+		A47D3F572237316000CC5FBD /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
+		A4885EF6223719DD00C395EE /* FavoritesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesController.swift; sourceTree = "<group>"; };
+		A4885EF822371DF300C395EE /* FavoritePodcastCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritePodcastCell.swift; sourceTree = "<group>"; };
 		A490F70522349A2E0076F03A /* UIApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplication.swift; sourceTree = "<group>"; };
 		A4A0C9572232FA8800200C4D /* ThePinkPodcast.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ThePinkPodcast.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4A0C95A2232FA8800200C4D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -211,6 +217,7 @@
 				A4A0C98B2232FACC00200C4D /* MainTabBarController.swift */,
 				A4A0C98E2233022E00200C4D /* PodcastSearchController.swift */,
 				A4FF620E22334BF200991656 /* EpisodesController.swift */,
+				A4885EF6223719DD00C395EE /* FavoritesController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -241,6 +248,7 @@
 				A4FF6213223388FA00991656 /* EpisodeCell.xib */,
 				A4FF621D22339A1500991656 /* PlayerDetailsView.swift */,
 				A4FF621B2233982400991656 /* PlayerDetailsView.xib */,
+				A4885EF822371DF300C395EE /* FavoritePodcastCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -252,6 +260,7 @@
 				A4FF62192233911200991656 /* RSSFeed.swift */,
 				A4F0FDA22233AFB8006359F2 /* CMTime.swift */,
 				A490F70522349A2E0076F03A /* UIApplication.swift */,
+				A47D3F572237316000CC5FBD /* UserDefaults.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -494,9 +503,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4885EF922371DF300C395EE /* FavoritePodcastCell.swift in Sources */,
 				A490F70622349A2E0076F03A /* UIApplication.swift in Sources */,
 				A4FF621A2233911200991656 /* RSSFeed.swift in Sources */,
 				A4A0C98F2233022E00200C4D /* PodcastSearchController.swift in Sources */,
+				A4885EF7223719DD00C395EE /* FavoritesController.swift in Sources */,
 				A4FF62082233127700991656 /* APIService.swift in Sources */,
 				A4FF620D22333E0D00991656 /* PodcastCell.swift in Sources */,
 				A4FF6214223388FA00991656 /* EpisodeCell.swift in Sources */,
@@ -505,6 +516,7 @@
 				A4A0C95D2232FA8800200C4D /* ViewController.swift in Sources */,
 				A4FF62182233906700991656 /* String.swift in Sources */,
 				A4A0C992223302B600200C4D /* Podcast.swift in Sources */,
+				A47D3F582237316000CC5FBD /* UserDefaults.swift in Sources */,
 				A4A0C9632232FA8800200C4D /* ThePinkPodcast.xcdatamodeld in Sources */,
 				A4A0C98C2232FACC00200C4D /* MainTabBarController.swift in Sources */,
 				A4A0C95B2232FA8800200C4D /* AppDelegate.swift in Sources */,

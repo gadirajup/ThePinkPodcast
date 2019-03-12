@@ -25,7 +25,55 @@ class EpisodesController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setupNavBarButtons()
         setupTableView()
+    }
+    
+    fileprivate func setupNavBarButtons() {
+        
+        let savedPodcasts = UserDefaults.standard.savedPodcasts()
+        
+        let hasFavorited = savedPodcasts.contains(where: {
+            $0.trackName == self.podcast?.trackName
+        })
+        
+        if hasFavorited {
+            var image = #imageLiteral(resourceName: "heart")
+            image = image.withRenderingMode(.alwaysOriginal)
+            
+            navigationItem.rightBarButtonItems = [
+                UIBarButtonItem(barButtonSystemItem: .bookmarks, target: self, action: nil)
+            ]
+        } else {
+            navigationItem.rightBarButtonItems = [
+                UIBarButtonItem(title: "Favorite", style: .plain, target: self, action: #selector(handleSaveFavorite)),
+                //UIBarButtonItem(title: "Fetch", style: .plain, target: self, action: #selector(handleFetchSavedPodcasts))
+            ]
+        }
+    }
+    
+    @objc fileprivate func handleSaveFavorite() {
+        guard let podcast = podcast else {
+            print("Podcast != Podcast")
+            return
+        }
+        UserDefaults.standard.savePodcast(podcast: podcast)
+        showBadgeHighlight()
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .bookmarks, target: self, action: nil)
+    }
+    
+    fileprivate func showBadgeHighlight() {
+        UIApplication.mainTabBarController()?.viewControllers?[0].tabBarItem.badgeValue = "New"
+    }
+    
+    @objc fileprivate func handleFetchSavedPodcasts() {
+        
+        print("fetch began")
+        
+        let podcasts = UserDefaults.standard.savedPodcasts()
+        podcasts.forEach { (p) in
+            print(p.trackName ?? "")
+        }
     }
     
     func fetchEpisodes() {

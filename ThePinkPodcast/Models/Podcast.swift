@@ -8,10 +8,10 @@
 
 import Foundation
 
-struct Podcast: Decodable {
-    let trackName: String?
-    let artistName: String?
-    let trackCount: Int?
-    let artworkUrl600: String?
-    let feedUrl: String?
+class Podcast: Encodable, Decodable {    
+    var trackName: String?
+    var artistName: String?
+    var trackCount: Int?
+    var artworkUrl600: String?
+    var feedUrl: String?
 }
