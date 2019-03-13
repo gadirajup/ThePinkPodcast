@@ -53,6 +53,28 @@ class APIService {
         }
     }
     
+    func downloadEpisode(episode: Episode) {
+        
+        let downloadRequest = DownloadRequest.suggestedDownloadDestination()
+        
+        Alamofire.download(episode.streamUrl, to: downloadRequest).downloadProgress { (progress) in
+            print(progress.fractionCompleted)
+            
+            NotificationCenter.default.post(name: NotificationCenter.name, object: nil, userInfo: ["title":episode.title, "progress": progress.fractionCompleted])
+            
+            }.response { (resp) in
+                print(resp.destinationURL?.absoluteString ?? "")
+                
+                var downloadedEpisodes = UserDefaults.standard.fetchDownloadedEpisodes()
+                guard let index = downloadedEpisodes.firstIndex(where: { (e) -> Bool in
+                    e.title == episode.title
+                }) else {return}
+                downloadedEpisodes[index].fileUrl = resp.destinationURL?.absoluteString ?? ""
+                
+                UserDefaults.standard.updateDownloadedEpisodes(withEpisodes: downloadedEpisodes)
+        }
+    }
+    
     struct SearchResults: Decodable {
         let resultCount: Int
         let results: [Podcast]

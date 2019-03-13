@@ -49,13 +49,24 @@
                             </label>
                         </subviews>
                     </stackView>
+                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JHY-Cp-KC4">
+                        <rect key="frame" x="16" y="100.5" width="100" height="27.5"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="20"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                        <size key="shadowOffset" width="0.0" height="1"/>
+                    </label>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="kJi-fu-YZ3" firstAttribute="trailing" secondItem="JHY-Cp-KC4" secondAttribute="trailing" id="4m1-g9-5Tg"/>
                     <constraint firstItem="mNk-jb-iDr" firstAttribute="leading" secondItem="kJi-fu-YZ3" secondAttribute="trailing" constant="16" id="CtU-6j-7A1"/>
                     <constraint firstItem="kJi-fu-YZ3" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Mjr-sY-WqH"/>
                     <constraint firstItem="mNk-jb-iDr" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="YvC-Wc-JWd"/>
+                    <constraint firstItem="JHY-Cp-KC4" firstAttribute="leading" secondItem="kJi-fu-YZ3" secondAttribute="leading" id="aW1-j8-BGc"/>
                     <constraint firstAttribute="trailingMargin" secondItem="mNk-jb-iDr" secondAttribute="trailing" id="fIN-RH-z57"/>
                     <constraint firstItem="kJi-fu-YZ3" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="v5v-HI-7HF"/>
+                    <constraint firstItem="kJi-fu-YZ3" firstAttribute="bottom" secondItem="JHY-Cp-KC4" secondAttribute="bottom" id="vQO-E6-iSK"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
@@ -63,6 +74,7 @@
                 <outlet property="dateLabel" destination="5TO-hp-AND" id="QVK-Yn-447"/>
                 <outlet property="descriptionLabel" destination="DrO-et-Uzq" id="P2p-Yd-80F"/>
                 <outlet property="episodeImageView" destination="kJi-fu-YZ3" id="hu2-sj-yoZ"/>
+                <outlet property="progressLabel" destination="JHY-Cp-KC4" id="Gwq-Fd-b1W"/>
                 <outlet property="titleLabel" destination="aVu-Bv-bMQ" id="fHW-qq-Tbz"/>
             </connections>
             <point key="canvasLocation" x="213.59999999999999" y="204.19790104947529"/>

@@ -23,6 +23,8 @@
 		A4A0C98C2232FACC00200C4D /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A0C98B2232FACC00200C4D /* MainTabBarController.swift */; };
 		A4A0C98F2233022E00200C4D /* PodcastSearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A0C98E2233022E00200C4D /* PodcastSearchController.swift */; };
 		A4A0C992223302B600200C4D /* Podcast.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A0C991223302B600200C4D /* Podcast.swift */; };
+		A4AFA29122397EFF00627CCE /* DownloadsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AFA29022397EFF00627CCE /* DownloadsController.swift */; };
+		A4AFA29322399B1800627CCE /* NotificationCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AFA29222399B1800627CCE /* NotificationCenter.swift */; };
 		A4F0FDA32233AFB8006359F2 /* CMTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F0FDA22233AFB8006359F2 /* CMTime.swift */; };
 		A4FF62082233127700991656 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4FF62072233127700991656 /* APIService.swift */; };
 		A4FF620B22333C5700991656 /* PodcastCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A4FF620A22333C5700991656 /* PodcastCell.xib */; };
@@ -85,6 +87,8 @@
 		A4A0C98B2232FACC00200C4D /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		A4A0C98E2233022E00200C4D /* PodcastSearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodcastSearchController.swift; sourceTree = "<group>"; };
 		A4A0C991223302B600200C4D /* Podcast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Podcast.swift; sourceTree = "<group>"; };
+		A4AFA29022397EFF00627CCE /* DownloadsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadsController.swift; sourceTree = "<group>"; };
+		A4AFA29222399B1800627CCE /* NotificationCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCenter.swift; sourceTree = "<group>"; };
 		A4F0FDA22233AFB8006359F2 /* CMTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMTime.swift; sourceTree = "<group>"; };
 		A4FF62072233127700991656 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		A4FF620A22333C5700991656 /* PodcastCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PodcastCell.xib; sourceTree = "<group>"; };
@@ -218,6 +222,7 @@
 				A4A0C98E2233022E00200C4D /* PodcastSearchController.swift */,
 				A4FF620E22334BF200991656 /* EpisodesController.swift */,
 				A4885EF6223719DD00C395EE /* FavoritesController.swift */,
+				A4AFA29022397EFF00627CCE /* DownloadsController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -261,6 +266,7 @@
 				A4F0FDA22233AFB8006359F2 /* CMTime.swift */,
 				A490F70522349A2E0076F03A /* UIApplication.swift */,
 				A47D3F572237316000CC5FBD /* UserDefaults.swift */,
+				A4AFA29222399B1800627CCE /* NotificationCenter.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -507,6 +513,7 @@
 				A490F70622349A2E0076F03A /* UIApplication.swift in Sources */,
 				A4FF621A2233911200991656 /* RSSFeed.swift in Sources */,
 				A4A0C98F2233022E00200C4D /* PodcastSearchController.swift in Sources */,
+				A4AFA29122397EFF00627CCE /* DownloadsController.swift in Sources */,
 				A4885EF7223719DD00C395EE /* FavoritesController.swift in Sources */,
 				A4FF62082233127700991656 /* APIService.swift in Sources */,
 				A4FF620D22333E0D00991656 /* PodcastCell.swift in Sources */,
@@ -518,6 +525,7 @@
 				A4A0C992223302B600200C4D /* Podcast.swift in Sources */,
 				A47D3F582237316000CC5FBD /* UserDefaults.swift in Sources */,
 				A4A0C9632232FA8800200C4D /* ThePinkPodcast.xcdatamodeld in Sources */,
+				A4AFA29322399B1800627CCE /* NotificationCenter.swift in Sources */,
 				A4A0C98C2232FACC00200C4D /* MainTabBarController.swift in Sources */,
 				A4A0C95B2232FA8800200C4D /* AppDelegate.swift in Sources */,
 				A4F0FDA32233AFB8006359F2 /* CMTime.swift in Sources */,

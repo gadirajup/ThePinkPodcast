@@ -168,7 +168,7 @@
                     <rect key="frame" x="0.0" y="20" width="375" height="64"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Fnj-UP-abT">
-                            <rect key="frame" x="8" y="8" width="359" height="48"/>
+                            <rect key="frame" x="8" y="8" width="271" height="48"/>
                             <subviews>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="appicon" translatesAutoresizingMaskIntoConstraints="NO" id="5XG-u9-3Bj">
                                     <rect key="frame" x="0.0" y="0.0" width="48" height="48"/>
@@ -177,45 +177,43 @@
                                     </constraints>
                                 </imageView>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Episode Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o33-Bu-qdf">
-                                    <rect key="frame" x="56" y="0.0" width="191" height="48"/>
+                                    <rect key="frame" x="56" y="0.0" width="215" height="48"/>
                                     <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="16"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pQW-eO-bDo">
-                                    <rect key="frame" x="255" y="0.0" width="48" height="48"/>
-                                    <constraints>
-                                        <constraint firstAttribute="height" constant="36" id="9ML-Tb-u6J"/>
-                                        <constraint firstAttribute="width" constant="36" id="AD9-0i-iWi"/>
-                                        <constraint firstAttribute="width" secondItem="pQW-eO-bDo" secondAttribute="height" id="tin-We-Qcm"/>
-                                    </constraints>
-                                    <color key="tintColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
-                                    <state key="normal" image="pause"/>
-                                </button>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MA3-dP-dKh">
-                                    <rect key="frame" x="311" y="0.0" width="48" height="48"/>
-                                    <constraints>
-                                        <constraint firstAttribute="height" constant="36" id="bgx-4P-RhW"/>
-                                        <constraint firstAttribute="width" constant="36" id="jiH-fB-Eth"/>
-                                        <constraint firstAttribute="width" secondItem="MA3-dP-dKh" secondAttribute="height" id="joc-vD-UB1"/>
-                                    </constraints>
-                                    <color key="tintColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
-                                    <state key="normal" image="fastforward15"/>
-                                </button>
                             </subviews>
-                            <constraints>
-                                <constraint firstItem="pQW-eO-bDo" firstAttribute="centerY" secondItem="Fnj-UP-abT" secondAttribute="centerY" id="VI9-CC-Rj1"/>
-                                <constraint firstItem="MA3-dP-dKh" firstAttribute="centerY" secondItem="Fnj-UP-abT" secondAttribute="centerY" id="WZg-Od-Dkj"/>
-                            </constraints>
                         </stackView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MA3-dP-dKh">
+                            <rect key="frame" x="331" y="14" width="36" height="36"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="36" id="suc-XW-a8o"/>
+                                <constraint firstAttribute="width" constant="36" id="yYP-si-78c"/>
+                            </constraints>
+                            <color key="tintColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                            <state key="normal" image="fastforward15"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pQW-eO-bDo">
+                            <rect key="frame" x="287" y="14" width="36" height="36"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="36" id="7eA-Sr-dHV"/>
+                                <constraint firstAttribute="height" constant="36" id="Oqu-SX-hH3"/>
+                            </constraints>
+                            <color key="tintColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                            <state key="normal" image="pause"/>
+                        </button>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="64" id="3qY-Jg-s8R"/>
                         <constraint firstItem="Fnj-UP-abT" firstAttribute="top" secondItem="mp3-OR-h6D" secondAttribute="top" constant="8" id="5bJ-tK-4Lu"/>
-                        <constraint firstAttribute="trailing" secondItem="Fnj-UP-abT" secondAttribute="trailing" constant="8" id="9HW-QZ-SmW"/>
+                        <constraint firstItem="pQW-eO-bDo" firstAttribute="leading" secondItem="Fnj-UP-abT" secondAttribute="trailing" constant="8" id="9HW-QZ-SmW"/>
+                        <constraint firstItem="pQW-eO-bDo" firstAttribute="centerY" secondItem="mp3-OR-h6D" secondAttribute="centerY" id="AuW-je-5aZ"/>
                         <constraint firstAttribute="bottom" secondItem="Fnj-UP-abT" secondAttribute="bottom" constant="8" id="J0w-99-l2h"/>
+                        <constraint firstAttribute="trailing" secondItem="MA3-dP-dKh" secondAttribute="trailing" constant="8" id="Rh9-mu-0rR"/>
+                        <constraint firstItem="pQW-eO-bDo" firstAttribute="trailing" secondItem="MA3-dP-dKh" secondAttribute="leading" constant="-8" id="sK9-eX-oGj"/>
                         <constraint firstItem="Fnj-UP-abT" firstAttribute="leading" secondItem="mp3-OR-h6D" secondAttribute="leading" constant="8" id="uVd-r7-Bsd"/>
+                        <constraint firstItem="MA3-dP-dKh" firstAttribute="centerY" secondItem="mp3-OR-h6D" secondAttribute="centerY" id="vQo-yb-LMX"/>
                     </constraints>
                 </view>
             </subviews>

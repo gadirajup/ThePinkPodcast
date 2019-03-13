@@ -129,4 +129,17 @@ class EpisodesController: UITableViewController {
     override func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
         return episodes.isEmpty ? 200 : 0
     }
+    
+    override func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+        
+        let downloadAction = UITableViewRowAction(style: .normal, title: "Download") { (_, _) in
+            UserDefaults.standard.downloadEpisode(episode: self.episodes[indexPath.row])
+            UIApplication.mainTabBarController()?.viewControllers?[2].tabBarItem.badgeValue = "New"
+            
+            // Download with Alamofire
+            APIService.shared.downloadEpisode(episode: self.episodes[indexPath.row])
+        }
+        
+        return [downloadAction]
+    }
 }
